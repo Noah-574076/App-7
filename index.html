@@ -40,20 +40,18 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         function allergyAdd(){ //This adds one to allergy.
             allergy_count = allergy_count + 1;
-		alert(allergy_count); //This is for the allergy alert in the results.
+		alert(allergy_count); //This is for the allergy alert in the results. **Not used
         }
 
         function coldAdd(){ //This adds one to cold.
             cold_count = cold_count + 1;
-		alert(cold_count); //This is for the cold alert in results.
+		alert(cold_count); //This is for the cold alert in results. **Not used
         }
 	function resultpercent() {
 		var allergypercent = allergy_count /6 *100; // This changes the raw numbers of the allergy count to percentages. This also adds a new variable, allergypercent, which is the percent chance they have allergy symptoms. -->!
-		alert(allergypercent);
 		var coldpercent = cold_count /6 *100; //This changes the raw numbers of the cold count to percentages. This also adds a new variable, coldpercent, which is the percent chance they are showing cold symptoms. -->!
-		alert(coldpercent);
 		var resultText = document.getElementById("results");
-		resultText.innerHTML = "Percent chance it is allergies =" + allergy_count /6 *100 + "<br> Percent chance it is a cold =" + cold_count /6 *100;");
+		resultText.innerHTML = "Percent chance it is allergies =" + allergypercent + "<br> Percent chance it is a cold =" + coldpercent;");
 	}
   </script>
 
@@ -186,7 +184,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-		<a href="#eight"  onclick="resultText();" class="w3-btn w3-black"> Go to Page Eight</a>
+		<a href="#eight"  onclick="resultpercent();" class="w3-btn w3-black"> Go to Page Eight</a>
 		 <!-- This button will send you to the results page of the questionnaire. -->
     	</div>
  </div>	
