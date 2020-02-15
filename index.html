@@ -49,8 +49,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		var allergypercent = allergy_count /6 *100; //This changes the raw numbers of 
 		var coldpercent = cold_count /6 *100;
 		var resultText = document.getElementByID ("results");
-		resultText.innerHTML = "Percent chance it is allergies =" + allergy_count /6 *100 + "<br> Percent chance it is a cold ="
-			
+		resultText.innerHTML = "Percent chance it is allergies =" + allergy_count /6 *100 + "<br> Percent chance it is a cold =" + cold_count /6 *100;
+	}
   </script>
 
 </head> 
@@ -133,6 +133,49 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#four" class="w3-btn w3-black"> Go to Page Four </a>
     	</div>
  </div>
+	
+<div class="page" id="four">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Are the symptoms seasonal or chronic?</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>Respond yes or no.</p> 
+		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy or cold variables. -->!
+	<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+		<a href="#five" class="w3-btn w3-black"> Go to Page Five </a>
+    	</div>
+ </div>
+	
+<div class="page" id="five">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Are you experiencing body aches?</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>Respond yes or no.</p> 
+		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy or cold variables. -->!
+	<a href="#six"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+		<a href="#six" class="w3-btn w3-black"> Go to Page Six </a>
+    	</div>
+ </div>
+
+<div class="page" id="six">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Are you experiencing eczema?</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>Respond yes or no.</p> 
+		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy or cold variables. -->!
+	<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#seven"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+		<a href="#seven" class="w3-btn w3-black"> Go to Page Four </a>
+    	</div>
+ </div>
+	
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
