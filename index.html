@@ -34,22 +34,26 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       <link rel="stylesheet" href="w3-colors-flat.css">
      
 	<script>
-        var allergy_count = 0;
-        var cold_count = 0; 
+        var allergy_count = 0; //This "zeroes" the variable allergy
+        var cold_count = 0; //This "zeroes" the variable cold
 
 
-        function allergyAdd(){
+        function allergyAdd(){ //This adds one to allergy.
             allergy_count = allergy_count + 1;
+		alert(allergy_count); //This is for the allergy alert in the results.
         }
 
-        function coldAdd(){
+        function coldAdd(){ //This adds one to cold.
             cold_count = cold_count + 1;
+		alert(cold_count); //This is for the cold alert in results.
         }
 	function resultpercent() {
-		var allergypercent = allergy_count /6 *100; //This changes the raw numbers of 
-		var coldpercent = cold_count /6 *100;
-		var resultText = document.getElementByID ("results");
-		resultText.innerHTML = "Percent chance it is allergies =" + allergypercent + "<br> Percent chance it is a cold =" + coldpercent;
+		var allergypercent = allergy_count /6 *100; // This changes the raw numbers of the allergy count to percentages. This also adds a new variable, allergypercent, which is the percent chance they have allergy symptoms. -->!
+		alert(allergypercent);
+		var coldpercent = cold_count /6 *100; //This changes the raw numbers of the cold count to percentages. This also adds a new variable, coldpercent, which is the percent chance they are showing cold symptoms. -->!
+		alert(coldpercent);
+		var resultText = document. getElementById("results")
+		resultText.innerHTML = "Percent chance it is allergies =" + allergypercent + "<br> Percent chance it is a cold =" + coldpercent;");
 	}
   </script>
 
@@ -102,7 +106,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy or cold variables. -->!
 	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
-		<a href="#two" class="w3-btn w3-black"> Go to Page Two </a>
+		<a href="#two" class="w3-btn w3-black"> Go to Page Two </a> <!--This sends the user to the next page-->!
     	</div>
  </div>
 
@@ -116,10 +120,23 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy or cold variables. -->!
 	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
-		<a href="#three" class="w3-btn w3-black"> Go to Page four </a>
+		<a href="#three" class="w3-btn w3-black"> Go to Page Three </a>
     	</div>
  </div>
 	
+<div class="page" id="three">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Do you have a fever?</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>Respond yes or no.</p> 
+		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy or cold variables. -->!
+	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+		<a href="#four" class="w3-btn w3-black"> Go to Page Four </a>
+    	</div>
+ </div>
 	
 <div class="page" id="four">
 	<div id="header" class="w3-container w3-flat-carrot">
@@ -159,10 +176,19 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy or cold variables. -->!
 	<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#seven"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
-		<a href="#seven" class="w3-btn w3-black"> Go to Page Four </a>
+		<a href="#seven" class="w3-btn w3-black"> Go to Page Seven </a> <!--This will go to the results page-->!
     	</div>
  </div>
 	
+<div class="page" id="seven">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Results!</h1> <!--This is the header for the results page-->!
+	</div>
+	
+    	<div id="content" class="w3-container">
+		<p id= "results"> Results</p>
+    	</div>
+ </div>	
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
