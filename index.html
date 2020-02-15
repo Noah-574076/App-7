@@ -34,22 +34,20 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       <link rel="stylesheet" href="w3-colors-flat.css">
    </head> 
 
+<!-- This function gives us the ability to count the amount of responses given as either allergy or cold. -->!
 
-<script>
+  <script>
         var allergy_count = 0;
-        var cold_count = 0;
+        var cold_count = 0; 
 
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
-		alert(allergy_count);
-
         }
 
         function coldAdd(){
             cold_count = cold_count + 1;
         }
-
   </script>
 
 
@@ -92,24 +90,53 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 1</h1>
+		<h1>Are your eyes watery or itchy?</h1>
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Put Question 1 content here.</p>    
+        <p>Are your eyes watery or itchy?</p> 
+		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy or cold variables. -->!
+	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+		<a href="#two" class="w3-btn w3-black"> Go to Page Two </a>
     	</div>
-</div>
+ </div><!-- /content -->
 
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 2</h1>
+		<h1>Do you have a fever?</h1> <!-- This asks the question as to whether the person has a fever. -->!
 	</div>
-	
+	<!-- These lines of code give us two button choices, with a yes response adding one to cold and a no response adding one to allergy. -->!
 	<div id="content" class="w3-container">
-		<p>Content of page 2 goes here.</p>
+		<p><a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+		<a href="#two" class="w3-btn w3-black"> Go to Page Three </a></p>
 	</div>
 </div>	
 
+<div class="page" id="three">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Do you have a sore throat?</h1> <!-- This asks the question as to whether the person has a sore throat in the first heading. -->!
+	</div>
+	<!-- These lines of code give us two button choices, with a yes response adding one to cold and a no response adding one to allergy. -->!
+	<div id="content" class="w3-container">
+		<p><a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+		<a href="#two" class="w3-btn w3-black"> Go to Page Four </a></p>
+	</div>
+</div>	
+	
+<div class="page" id="four">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Are your symptoms seasonal or chronic?</h1> <!-- This asks as to whether the sympoms are seasonal or chronic in the first header. -->!
+	<!-- These lines of code give us two button choices, with a yes response adding one to cold and a no response adding one to allergy. -->!
+	<div id="content" class="w3-container">
+		<p><a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+		<a href="#two" class="w3-btn w3-black"> Go to Page Five </a></p>
+	</div>
+</div>		
+	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
