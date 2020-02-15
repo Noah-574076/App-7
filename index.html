@@ -103,10 +103,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container">
         <p>Respond yes or no.</p> 
-		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy or cold variables. -->!
+		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy or cold variables. -->
 	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
-		<a href="#two" class="w3-btn w3-black"> Go to Page Two </a> <!--This sends the user to the next page-->!
+		<a href="#two" class="w3-btn w3-black"> Go to Page Two </a> <!--This sends the user to the next page-->
     	</div>
  </div>
 
@@ -117,7 +117,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container">
         <p>Respond yes or no.</p> 
-		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy or cold variables. -->!
+		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy or cold variables. -->
 	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
 		<a href="#three" class="w3-btn w3-black"> Go to Page Three </a>
@@ -131,7 +131,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container">
         <p>Respond yes or no.</p> 
-		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy or cold variables. -->!
+		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy or cold variables. -->
 	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
 		<a href="#four" class="w3-btn w3-black"> Go to Page Four </a>
@@ -159,7 +159,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container">
         <p>Respond yes or no.</p> 
-		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy or cold variables. -->!
+		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy or cold variables. -->
 	<a href="#six"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
 		<a href="#six" class="w3-btn w3-black"> Go to Page Six </a>
@@ -173,12 +173,22 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container">
         <p>Respond yes or no.</p> 
-		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy or cold variables. -->!
-	<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy or cold variables. -->
+	<a href="#seven"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#seven"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
-		<a href="#seven" class="w3-btn w3-black"> Go to Page Seven </a> <!--This will go to the results page-->!
+		<a href="#seven" class="w3-btn w3-black"> Go to Page Seven </a> <!--This will go to the results page-->
     	</div>
  </div>
+	
+<div class="page" id="seven">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Results!</h1> <!--This is the header for the page with the results button-->
+	</div>
+	
+    	<div id="content" class="w3-container">
+		<a href="#eight"  onclick="resultText();" class="w3-btn w3-black"> Results</a> <!-- This button will send you to the results page of the questionnaire. -->
+    	</div>
+ </div>	
 	
 <div class="page" id="seven">
 	<div id="header" class="w3-container w3-flat-carrot">
@@ -186,7 +196,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-		onclick="resultText();" class="w3-btn w3-black">
+		<p id="results"> Results</p>
+		
     	</div>
  </div>	
 	
