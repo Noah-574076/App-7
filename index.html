@@ -44,13 +44,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         function coldAdd(){
             cold_count = cold_count + 1;
-        }
-	function resultpercent() {
-		var allergypercent = allergy_count /6 *100; //This changes the raw numbers of 
-		var coldpercent = cold_count /6 *100;
-		var resultText = document.getElementByID ("results");
-		resultText.innerHTML = "Percent chance it is allergies =" + allergypercent + "<br> Percent chance it is a cold =" + coldpercent;
-	}
+        
   </script>
 
 </head> 
@@ -130,7 +124,21 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy or cold variables. -->!
 	<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
-		<a href="#four" class="w3-btn w3-black"> Go to Page five </a>
+		<a href="#four" class="w3-btn w3-black"> Go to Page Four </a>
+    	</div>
+ </div>
+	
+<div class="page" id="four">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Are your symptoms seasonal or chronic?</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>Respond yes or no.</p> 
+		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy or cold variables. -->!
+	<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+		<a href="#five" class="w3-btn w3-black"> Go to Page five </a>
     	</div>
  </div>
 	
