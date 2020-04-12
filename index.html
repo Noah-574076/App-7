@@ -34,26 +34,42 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       <link rel="stylesheet" href="w3-colors-flat.css">
      
 	<script>
-        var allergy_count = 0; //This "zeroes" the variable allergy
+        var covid_count = 0; //This "zeroes" the variable covid
         var cold_count = 0; //This "zeroes" the variable cold
+	var flu_count = 0;
+	var allrgy_count = 0;
 
 
-        function allergyAdd(){ //This adds one to allergy.
-            allergy_count = allergy_count + 1;
-		alert(allergy_count); //This is for the allergy alert in the results. **Not used
+        function covidAdd(){ //This adds one to covid.
+            covid_count = covid_count + 1;
+		alert(covid_count); //This is for the covid alert in the results. **Not used
         }
 
         function coldAdd(){ //This adds one to cold.
             cold_count = cold_count + 1;
 		alert(cold_count); //This is for the cold alert in results. **Not used
         }
+		
+	function fluAdd(){
+		flu_count = flu_count +1;
+		alert(flu_count);
+	}
+		
+	function allergyAdd(){
+	allergy_count = allergy_count +1
+	}
+		
 	function resultpercent() {
-		var allergypercent = allergy_count /6 *100; // This changes the raw numbers of the allergy count to percentages. This also adds a new variable, allergypercent, which is the percent chance they have allergy symptoms. -->!
+		var allergypercent = allergy_count /11 *100; // This changes the raw numbers of the allergy count to percentages. This also adds a new variable, allergypercent, which is the percent chance they have allergy symptoms. -->!
 		alert(allergypercent);
-		var coldpercent = cold_count /6 *100; //This changes the raw numbers of the cold count to percentages. This also adds a new variable, coldpercent, which is the percent chance they are showing cold symptoms. -->!
+		var coldpercent = cold_count /11 *100; //This changes the raw numbers of the cold count to percentages. This also adds a new variable, coldpercent, which is the percent chance they are showing cold symptoms. -->!
 		alert(coldpercent);
+		var covidpercent = covid_count /11 *100;
+		alert(covidpercent);
+		var flupercent = flu_count /11 *100;
+		alert (flupercent);
 		var resultText = document.getElementById("results");
-		resultText.innerHTML = "Percent chance it is allergies =" + allergypercent + "<br> Percent chance it is a cold =" + coldpercent;");
+		
 	}
   </script>
 
@@ -88,7 +104,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	<p>Are you feeling sick but don't know what it could possibly be? Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
@@ -98,69 +114,72 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Are your eyes watery or itchy?</h1>
+		<h1>How longs have your symptoms lasted?</h1>
 	</div>
 	
     	<div id="content" class="w3-container">
         <p>Respond yes or no.</p> 
 		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy or cold variables. -->
-	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
-		<a href="#two" class="w3-btn w3-black"> Go to Page Two </a> <!--This sends the user to the next page-->
+	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> Less than 14 days</a>
+        <a href="#two"  onclick="covidAdd();" class="w3-btn w3-black">7-25 Days</a>
+	<a href="#two"  onclick="fluAdd();" class="w3-btn w3-black">7-14</a>
+	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">Several weeks</a>
+	<a href="#two" class="w3-btn w3-black"> Go to Page Two </a> <!--This sends the user to the next page-->
     	</div>
  </div>
 
 <div class="page" id="two">
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Do you have a fever?</h1>
+		<h1>Do you have a cough?</h1>
 	</div>
 	
     	<div id="content" class="w3-container">
         <p>Respond yes or no.</p> 
 		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy or cold variables. -->
-	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+	<a href="#three"  onclick="covidAdd();" onclick = "fluAdd();" class="w3-btn w3-black"> Yes (dry)</a>
+        <a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes (mild)</a>
 		<a href="#three" class="w3-btn w3-black"> Go to Page Three </a>
     	</div>
  </div>
 	
 <div class="page" id="three">
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Do you have a fever?</h1>
+		<h1>Do you have shortness of breath?</h1>
 	</div>
 	
     	<div id="content" class="w3-container">
         <p>Respond yes or no.</p> 
 		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy or cold variables. -->
-	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+	<a href="#four"  onclick="covidAdd();" class="w3-btn w3-black"> Yes</a>
+         <a href="#four"  onclick="allergyAdd();" onclick="coldAdd();" onclick="fluAdd();" class="w3-btn w3-black">No</a>
 		<a href="#four" class="w3-btn w3-black"> Go to Page Four </a>
     	</div>
  </div>
 	
 <div class="page" id="four">
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Are your symptoms seasonal or chronic?</h1>
+		<h1>Are you sneezing?</h1>
 	</div>
 	
     	<div id="content" class="w3-container">
         <p>Respond yes or no.</p> 
 		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy or cold variables. -->
-	<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+	<a href="#five"  onclick="allergyAdd();" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#five"  onclick="fluAdd();" onclick="covidAdd();" class="w3-btn w3-black">No</a>
 		<a href="#five" class="w3-btn w3-black"> Go to Page five </a>
     	</div>
  </div>
 	
 <div class="page" id="five">
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Are you experiencing body aches?</h1>
+		<h1>Are you experiencing a fever?</h1>
 	</div>
 	
     	<div id="content" class="w3-container">
         <p>Respond yes or no.</p> 
 		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy or cold variables. -->
-	<a href="#six"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+	<a href="#six"  onclick="coldAdd();" onclickclass="w3-btn w3-black"> Yes</a>
          	<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
 		<a href="#six" class="w3-btn w3-black"> Go to Page Six </a>
     	</div>
