@@ -50,23 +50,23 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		alert(cold_count); //This is for the cold alert in results. **Not used
         }
 		
-	function fluAdd(){
+	function fluAdd(){. //this adds one to flu
 		flu_count = flu_count +1;
 		alert(flu_count);
 	}
 		
-	function allergyAdd(){
+	function allergyAdd(){ //this adds one to allergy
 	allergy_count = allergy_count +1
 	}
 		
 	function resultpercent() {
-		var allergypercent = allergy_count /11 *100; // This changes the raw numbers of the allergy count to percentages. This also adds a new variable, allergypercent, which is the percent chance they have allergy symptoms. -->!
+		var allergypercent = allergy_count /6 *100; // This changes the raw numbers of the allergy count to percentages. This also adds a new variable, allergypercent, which is the percent chance they have allergy symptoms. -->!
 		alert(allergypercent);
-		var coldpercent = cold_count /11 *100; //This changes the raw numbers of the cold count to percentages. This also adds a new variable, coldpercent, which is the percent chance they are showing cold symptoms. -->!
+		var coldpercent = cold_count /6 *100; //This changes the raw numbers of the cold count to percentages. This also adds a new variable, coldpercent, which is the percent chance they are showing cold symptoms. -->!
 		alert(coldpercent);
-		var covidpercent = covid_count /11 *100;
+		var covidpercent = covid_count /6 *100; //this changes the raw numbers of the covid count to percentages.
 		alert(covidpercent);
-		var flupercent = flu_count /11 *100;
+		var flupercent = flu_count /6 *100; //this changes the raw numbers of the flu count to percentages
 		alert (flupercent);
 		var resultText = document.getElementById("results");
 		
@@ -119,11 +119,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container">
         <p>Respond yes or no.</p> 
-		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy or cold variables. -->
-	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> Less than 14 days</a>
-        <a href="#two"  onclick="covidAdd();" class="w3-btn w3-black">7-25 Days</a>
-	<a href="#two"  onclick="fluAdd();" class="w3-btn w3-black">7-14</a>
-	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">Several weeks</a>
+		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy, cold, flu, or covid variables. -->
+	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> Less than 14 days</a> <!--this adds one to cold-->
+        <a href="#two"  onclick="covidAdd();" class="w3-btn w3-black">7-25 Days</a> <!--this adds one to covid-->
+	<a href="#two"  onclick="fluAdd();" class="w3-btn w3-black">7-14</a> <!--this adds one to flu-->
+	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">Several weeks</a> <!--this adds one to allergy-->
 	<a href="#two" class="w3-btn w3-black"> Go to Page Two </a> <!--This sends the user to the next page-->
     	</div>
  </div>
@@ -136,9 +136,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     	<div id="content" class="w3-container">
         <p>Respond yes or no.</p> 
 		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy or cold variables. -->
-	<a href="#three"  onclick="covidAdd();" onclick = "fluAdd();" class="w3-btn w3-black"> Yes (dry)</a>
-        <a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
-	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes (mild)</a>
+	<a href="#three"  onclick="covidAdd();" onclick = "fluAdd();" class="w3-btn w3-black"> Yes (dry)</a> <!--this adds one to covid and flu-->
+        <a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a> <!--this adds one to allergy-->
+	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes (mild)</a> <!--this adds one to cold-->
 		<a href="#three" class="w3-btn w3-black"> Go to Page Three </a>
     	</div>
  </div>
@@ -151,8 +151,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     	<div id="content" class="w3-container">
         <p>Respond yes or no.</p> 
 		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy or cold variables. -->
-	<a href="#four"  onclick="covidAdd();" class="w3-btn w3-black"> Yes</a>
-         <a href="#four"  onclick="allergyAdd();" onclick="coldAdd();" onclick="fluAdd();" class="w3-btn w3-black">No</a>
+	<a href="#four"  onclick="covidAdd();" class="w3-btn w3-black"> Yes</a> <!--this adds one to covid-->
+         <a href="#four"  onclick="allergyAdd();" onclick="coldAdd();" onclick="fluAdd();" class="w3-btn w3-black">No</a> <!--this adds one to allergy, cold, and flu-->
 		<a href="#four" class="w3-btn w3-black"> Go to Page Four </a>
     	</div>
  </div>
@@ -165,8 +165,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     	<div id="content" class="w3-container">
         <p>Respond yes or no.</p> 
 		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy or cold variables. -->
-	<a href="#five"  onclick="allergyAdd();" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#five"  onclick="fluAdd();" onclick="covidAdd();" class="w3-btn w3-black">No</a>
+	<a href="#five"  onclick="allergyAdd();" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!--this adds one to cold and allergy-->
+         	<a href="#five"  onclick="fluAdd();" onclick="covidAdd();" class="w3-btn w3-black">No</a> <!--this adds one to flu and covid-->
 		<a href="#five" class="w3-btn w3-black"> Go to Page five </a>
     	</div>
  </div>
@@ -179,8 +179,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     	<div id="content" class="w3-container">
         <p>Respond yes or no.</p> 
 		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy or cold variables. -->
-	<a href="#six"  onclick="coldAdd();" onclick="fluAdd();" onclick="covidAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+	<a href="#six"  onclick="coldAdd();" onclick="fluAdd();" onclick="covidAdd();" class="w3-btn w3-black"> Yes</a> <!--this adds one to cold, flu, and covid-->
+         	<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black">No</a> <!--this adds one to allergy-->
 		<a href="#six" class="w3-btn w3-black"> Go to Page Six </a>
     	</div>
  </div>
@@ -193,8 +193,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     	<div id="content" class="w3-container">
         <p>Respond yes or no.</p> 
 		<!--This adds a button for yes and no responses. The yes and no responses either add one point to the allergy or cold variables. -->
-	<a href="#seven"  onclick="covidAdd();" onclick="fluAdd();" onclickclass="w3-btn w3-black"> Yes</a>
-         	<a href="#seven"  onclick="allergyAdd();" onclick="coldAdd();" class="w3-btn w3-black">No</a>
+	<a href="#seven"  onclick="covidAdd();" onclick="fluAdd();" onclickclass="w3-btn w3-black"> Yes</a> <!--this adds one to covid and flu-->
+         	<a href="#seven"  onclick="allergyAdd();" onclick="coldAdd();" class="w3-btn w3-black">No</a> <!--this ads one to cold and allergy-->
 		<a href="#seven" class="w3-btn w3-black"> Go to Page Seven </a> <!--This will go to the results page-->
     	</div>
  </div>
@@ -205,21 +205,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-		<a href="#eight" onclick="<resultpercent>();" class="w3-btn w3-black"> Go to Results </a>
-		 <!-- This button will send you to the results page of the questionnaire. -->
+		<canvas id = "a" width = "400" height = "300" style = "border:2px solid#000000"> </canvas>
     	</div>
  </div>	
 	
-<div class="page" id="eight">
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Results!</h1> <!--This is the header for the results page-->
-	</div>
-	
-    	<div id="content" class="w3-container">
-		<p id="results">Results Here</p>
-		
-    	</div>
- </div>	
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
