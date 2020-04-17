@@ -34,13 +34,18 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       <link rel="stylesheet" href="w3-colors-flat.css">
      
 	<script>
+		
+	
+var docMod = document.lastModified; // loads last modified time stamp into docMod variable
+alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
+console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+		
         var covid_count = 0; //This "zeroes" the variable covid
         var cold_count = 0; //This "zeroes" the variable cold
 	var flu_count = 0; // this "zeroes" the variable flu
-	var allergy_count = 0; //this "zeoes" th evariable allergy
-		
-		
-	var varName;
+	var allergy_count = 0; //this "zeoes" th evariable allergy	
+	
+		var varName;
 
 var maxVal = Math.max(covid_count,cold_count,flu_count,allergy_count); //this chooses the variable that has the maximum value
 if(covid_count == maxVal) varName = 'covid_type'; //if the covid count is the highest, the variable will be covid
