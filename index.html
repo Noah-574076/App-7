@@ -223,23 +223,43 @@ $('#idOfInput').val(varName);
 		<canvas id = "a" width = "400" height = "300" style = "border:2px solid#000000"> </canvas>
     	</div>
 	<script>
+		if (maxVal=covid_type) {
 		function draw_name() { //this will draw text on the canvas
 			var a_canvas = document.getElementById("a"); //this shows the writing will be on the "a" canvas
 			var a_context = a_canvas.getContext("2d"); //this gives the writing 2d properties
 			a_context.font = "bold 30px Arial"; //this gives the font and size to the writing
-			a_context.textAlign = "center"; //this alligns the text in the center of where I put it
-			if (maxVal=covid_type) {
-				a_context.fillText("Covid", 100,150); //draws Covid onto the canvas at 100,150 if maxVal is covid
-			}
-			if (maxVal=allergy_type) {
-				a_context.fillText("Allergies", 100,150); //draws Allergies onto the canvas at 100,150 is maxVal is allergy
-			}
-			if (maxVal=cold_type) {
-				a_context.fillText("Cold", 100,150); //draws Cold onto the canvas at 100,150 maxVal is cold
-			}
-			if (maxVal=flu_type) {
-				a_context.fillText("Flu", 100,150); //draws Flu onto the canvas at 100,150 if maxVal is flu
-			}
+			a_context.textAlign = "center"; //this alligns the text in the center of where I put it		
+			a_context.fillText("Covid", 100,150); //draws Covid onto the canvas at 100,150 if maxVal is covid
+		}
+		}
+		if (maxVal=allergy_type) {
+		function draw_name() { //this will draw text on the canvas
+			var a_canvas = document.getElementById("a"); //this shows the writing will be on the "a" canvas
+			var a_context = a_canvas.getContext("2d"); //this gives the writing 2d properties
+			a_context.font = "bold 30px Arial"; //this gives the font and size to the writing
+			a_context.textAlign = "center"; //this alligns the text in the center of where I put it		
+			a_context.fillText("Allergies", 100,150); //draws Covid onto the canvas at 100,150 if maxVal is covid
+		}	
+		}	
+		if (maxVal=cold_type) {
+		function draw_name() { //this will draw text on the canvas
+			var a_canvas = document.getElementById("a"); //this shows the writing will be on the "a" canvas
+			var a_context = a_canvas.getContext("2d"); //this gives the writing 2d properties
+			a_context.font = "bold 30px Arial"; //this gives the font and size to the writing
+			a_context.textAlign = "center"; //this alligns the text in the center of where I put it		
+			a_context.fillText("Cold", 100,150); //draws Covid onto the canvas at 100,150 if maxVal is covid
+		}
+		}
+		if (maxVal=flu_type) {
+		function draw_name() { //this will draw text on the canvas
+			var a_canvas = document.getElementById("a"); //this shows the writing will be on the "a" canvas
+			var a_context = a_canvas.getContext("2d"); //this gives the writing 2d properties
+			a_context.font = "bold 30px Arial"; //this gives the font and size to the writing
+			a_context.textAlign = "center"; //this alligns the text in the center of where I put it		
+			a_context.fillText("Flu", 100,150); //draws Covid onto the canvas at 100,150 if maxVal is covid
+		}
+		}
+	
 	</script>
 		<button onclick="draw_name();" class = "w3-btn w3-black"> Click to write the diagnosis. </button>
  </div>	
