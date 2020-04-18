@@ -232,7 +232,7 @@ $('#idOfInput').val(varName);
 			a_context.fillText("Covid", 100,150); //draws Covid onto the canvas at 100,150 if maxVal is covid
 		}
 		}
-		if (maxVal=allergy_type) {
+		else if (maxVal=allergy_type) {
 		function draw_name() { //this will draw text on the canvas
 			var a_canvas = document.getElementById("a"); //this shows the writing will be on the "a" canvas
 			var a_context = a_canvas.getContext("2d"); //this gives the writing 2d properties
@@ -241,7 +241,7 @@ $('#idOfInput').val(varName);
 			a_context.fillText("Allergies", 100,150); //draws Covid onto the canvas at 100,150 if maxVal is covid
 		}	
 		}	
-		if (maxVal=cold_type) {
+		else if (maxVal=cold_type) {
 		function draw_name() { //this will draw text on the canvas
 			var a_canvas = document.getElementById("a"); //this shows the writing will be on the "a" canvas
 			var a_context = a_canvas.getContext("2d"); //this gives the writing 2d properties
@@ -250,7 +250,7 @@ $('#idOfInput').val(varName);
 			a_context.fillText("Cold", 100,150); //draws Covid onto the canvas at 100,150 if maxVal is covid
 		}
 		}
-		if (maxVal=flu_type) {
+		else if (maxVal=flu_type) {
 		function draw_name() { //this will draw text on the canvas
 			var a_canvas = document.getElementById("a"); //this shows the writing will be on the "a" canvas
 			var a_context = a_canvas.getContext("2d"); //this gives the writing 2d properties
